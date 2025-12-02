@@ -1,4 +1,7 @@
 {
-    "userspace_version": "1.0",
-    "build_targets": []
+    "userspace_version": "1.1",
+    "build_targets": [
+        ["ai03/altair_x", "stable"],
+        ["ai03/altair_x", "unstable"]
+    ]
 }

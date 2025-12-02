@@ -1,0 +1,8 @@
+[tasks.configure]
+run = 'qmk config user.overlay_dir="$(realpath .)"'
+
+[tasks."compile:stable"]
+run = 'qmk compile -kb ai03/altair_x -km stable'
+
+[tasks."compile:unstable"]
+run = 'qmk compile -kb ai03/altair_x -km unstable'

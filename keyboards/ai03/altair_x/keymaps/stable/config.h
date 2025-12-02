@@ -1,0 +1,2 @@
+#define CHORDAL_HOLD
+#define TAPPING_TERM 160
