@@ -2,6 +2,35 @@
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
 
+## KeyPeek (Altair-X)
+
+Both `stable` and `unstable` include [KeyPeek's layer notification module](https://github.com/srwi/keypeek#setup) with VIA and Raw HID enabled. Altair-X's upstream configuration provides six dynamic keymap layers, covering both keymaps. Use a current QMK checkout with community module API 1.1.0 or newer.
+
+1. Initialize the modules, including the existing `sm_td` dependency:
+
+   ```sh
+   git submodule update --init --recursive
+   ```
+
+2. Build your preferred keymap and export the physical layout:
+
+   ```sh
+   qmk compile -kb ai03/altair_x -km stable
+   qmk info -kb ai03/altair_x -m -f json > keyboard_info.json
+   ```
+
+   Substitute `unstable` for `stable` as needed. With mise, use `mise run compile:stable` / `mise run compile:unstable` and `mise run keypeek:layout`.
+
+3. Flash the generated `ai03_altair_x_stable.uf2` (or `ai03_altair_x_unstable.uf2`) to both halves using the board's normal RP2040 bootloader procedure. Flash each half separately over USB.
+
+4. Download the macOS archive matching your Mac's CPU from [KeyPeek releases](https://github.com/srwi/keypeek/releases/latest), extract `KeyPeek.app`, and move it to Applications. Launch it with the keyboard connected over USB, select Altair-X, and choose `keyboard_info.json` when prompted.
+
+5. Hold a layer key and verify that the overlay changes with the keyboard. The `unstable` keymap's `sm_td` tap/hold actions are implemented in C; KeyPeek reads their underlying keycodes and cannot edit those custom behaviors.
+
+VIA stores keymap edits in EEPROM. If you later change `keymap.c` or switch between `stable` and `unstable`, reset the stored VIA keymap/EEPROM to load the compiled defaults (this discards edits made in KeyPeek or VIA).
+
+The notification module is listed before `sm_td` so it can observe key events before `sm_td` consumes them. `sm_td` installs its own community module hook; do not call `process_smtd()` again from `process_record_user()`.
+
 ## Howto configure your build targets
 
 1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
