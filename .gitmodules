@@ -1,3 +1,6 @@
 [submodule "modules/stasmarkin"]
 	path = modules/stasmarkin
 	url = https://github.com/stasmarkin/sm_td.git
+[submodule "modules/srwi"]
+	path = modules/srwi
+	url = https://github.com/srwi/qmk-modules.git

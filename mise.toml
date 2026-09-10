@@ -6,3 +6,7 @@ run = 'qmk compile -kb ai03/altair_x -km stable'
 
 [tasks."compile:unstable"]
 run = 'qmk compile -kb ai03/altair_x -km unstable'
+
+[tasks."keypeek:layout"]
+description = "Export Altair-X layout for KeyPeek"
+run = 'qmk info -kb ai03/altair_x -m -f json > keyboard_info.json'

@@ -1,1 +1,3 @@
-{ "modules": ["stasmarkin/sm_td"] }
+{
+    "modules": ["srwi/keypeek_layer_notify", "stasmarkin/sm_td"]
+}
