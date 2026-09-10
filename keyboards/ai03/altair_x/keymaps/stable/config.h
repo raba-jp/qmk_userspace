@@ -1,2 +1,5 @@
-#define CHORDAL_HOLD
-#define TAPPING_TERM 160
+// #define CHORDAL_HOLD
+#define MAX_DEFERRED_EXECUTORS 10
+#define TAPPING_TERM 180
+// #define FLOW_TAP_TERM 125
+// #define QUICK_TAP_TERM 175
