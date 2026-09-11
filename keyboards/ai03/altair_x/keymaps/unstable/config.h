@@ -4,7 +4,7 @@
 #define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
 #define CHORDAL_HOLD
-#define FLOW_TAP_TERM 150
+#define FLOW_TAP_TERM 100
 #define QUICK_TAP_TERM 90
 
 // The Space layer-tap activates on the next key press; HRMs wait for a tap.

@@ -39,7 +39,7 @@ VIA で編集したキーマップは EEPROM に保存されます。`keymap.c` 
 | --- | --- |
 | ホームロウ MOD（HRM） | タッピングタームは280ms。HRM を押したまま反対手のキーを押して離すと、修飾キーとして動作 |
 | 同手入力 | Chordal Hold がタップを優先。同じ手の複数の HRM で、反対手のキーを修飾する操作は可能 |
-| Flow Tap | 英字・主な句読点・Space・Minus の後、150ms以内の Mod-Tap 入力をタップに確定。Ctrl・GUI・左 Alt が有効な間は無効 |
+| Flow Tap | 英字・主な句読点・Space・Minus の後、100ms以内の Mod-Tap 入力をタップに確定。Ctrl・GUI・左 Alt が有効な間は無効 |
 | タップ後の長押しによる文字リピート | Quick Tap の判定時間は90ms |
 | Space | タップで空白、180msの長押しで Symbols レイヤーを有効化。別キーを押した場合は即座にレイヤーを有効化。Flow Tap の対象外 |
 | Hyper | Minus または K のホールドで、左 Ctrl＋Shift＋Alt＋GUI の4修飾キーを有効化 |
