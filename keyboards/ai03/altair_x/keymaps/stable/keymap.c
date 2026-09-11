@@ -81,6 +81,7 @@ smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap
         SMTD_MT(KC_S, KC_RIGHT_ALT)
         SMTD_MT(KC_H, KC_RIGHT_CTRL)
         SMTD_LT(KC_SPACE, _SYMBOLS)
+        SMTD_LT(KC_TAB, _NAV)
     }
 
     return SMTD_RESOLUTION_UNHANDLED;
