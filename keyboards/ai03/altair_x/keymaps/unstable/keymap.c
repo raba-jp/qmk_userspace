@@ -32,16 +32,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //      0......__1......__2......__3......__4......__5......__6......__7......__8......__9......__10.....__11.....__12.....__13.....
     [_NAV] = LAYOUT(
         _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______, _______, KC_6,    KC_7,    KC_8,    KC_9,     KC_0,    _______,
-        _______, KC_LCTL, KC_LALT, KC_LGUI, KC_LSFT, _______, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, _______, _______,
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   _______, _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,   KC_F12,
+        _______, LCTL_T(KC_F1), LALT_T(KC_F2), LGUI_T(KC_F3), LSFT_T(KC_F4), KC_F5, _______, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, _______, _______,
+        KC_F11,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,   KC_F12,
                                    _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
 //      0......__1......__2......__3......__4......__5......__6......__7......__8......__9......__10.....__11.....__12.....__13.....
+    // Selenium symbols: https://arthurin.github.io/keyboard-draw/#layer-symbols
     [_SYMBOLS] = LAYOUT(
-        _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, _______, _______, KC_ASTR, KC_AMPR, KC_LPRN, KC_RPRN, KC_CIRC, _______,
-        _______, _______, _______, KC_BSLS, KC_COLN, KC_QUOT, _______, _______, KC_GRV,  KC_EQL,  KC_LBRC, KC_RBRC, _______, _______,
-        _______, _______, _______, KC_PIPE, KC_SCLN, KC_DQT,  _______, _______, KC_TILD, KC_PLUS, KC_LCBR, KC_RCBR, _______, _______,
+        _______, KC_CIRC, KC_LABK, KC_RABK, KC_DLR,  KC_PERC, _______, _______, KC_AT,   KC_AMPR, KC_ASTR, KC_QUOT, KC_GRV,  _______,
+        _______, KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR, KC_EQL,  _______, _______, KC_BSLS, KC_PLUS, KC_MINUS,KC_SLASH,KC_DQT,  _______,
+        _______, KC_TILD, KC_LBRC, KC_RBRC, KC_UNDS, KC_HASH, _______, _______, KC_PIPE, KC_EXLM, KC_SCLN, KC_COLN, KC_QUES, _______,
                                    _______, _______ , _______, _______, _______, _______, _______, _______
     ),
 
